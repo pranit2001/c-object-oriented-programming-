@@ -1,0 +1,44 @@
+In OOP, we can use same name for methods and attributes in different classes; the methods or attributes are invoked based on the object type; e.g. in Listing 14.7, 
+the method ‘scarySound’ is used for class ‘Animal’ and ‘Bird’ at Lines 8 and 15 respectively. Then object of these classes are created at Line 26-27. Finally,
+method ‘scarySound’ is invoked at Lines 29-30; here Line 29 is the object of class Animal, therefore method of that class is invoked and corresponding message is printed. 
+Similarly, Line 30 invokes the ‘scaryMethod’ of class Bird and corresponding line is printed.
+
+
+// PolymorphismEx.cpp
+
+#include <iostream>
+using namespace std;
+
+class Animal{
+public:
+    void scarySound(){
+        cout << "Animals are running away due to scary sound." << endl;
+    }
+};
+
+class Bird{
+public:
+    void scarySound(){
+        cout << "Birds are flying away due to scary sound." << endl;
+    }
+};
+
+// empty class
+class Insect{
+};
+
+int main(){
+    Animal a;
+    Bird b;
+    Insect i;
+
+    a.scarySound();
+    b.scarySound();
+
+    return 0;
+}
+
+/* Outputs
+Animals are running away due to scary sound.
+Birds are flying away due to scary sound.
+*/
