@@ -1,3 +1,10 @@
+Suppose, we want to write a class ‘RateJungle’ in which visitor can provide ‘rating’ based on their visiting-experience. 
+If we write the class from the starting, then we need define attribute ‘visitorName’ again; which will make the code repetitive and unorganizable, 
+as the visitor entry will be at multiple places and such code is more prone to error. With the help of inheritance, we can avoid such duplication as shown in Listing 14.5; 
+where class Jungle is inherited at Line 33 by the class ‘RateJungle’. 
+Now, when the object ‘r’ of class ‘RateJungle’ is created at Line 62 of Listing 14.5, then this object ‘r’ will have the access to ‘visitorName’ as well 
+(which is in the parent class).
+
 // InheritanceEx.cpp
 
 #include <iostream>
