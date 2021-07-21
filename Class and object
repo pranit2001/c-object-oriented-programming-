@@ -33,3 +33,42 @@ int main (){
    
    americans.search();
 }
+
+# more structures for class and objects 
+#include <iostream>
+using namespace std;
+
+class Jungle{
+private: 
+    string visitorName;
+
+public:  
+    
+    // setVisitorName is accessible outside the class, which will set the visitor name
+    void setVisitorName(string name){
+        visitorName = name;
+    }
+
+    
+    string getVisitorName(){
+        return visitorName;
+    }
+
+    // welcome message
+    void welcomeMessage(){
+        cout << "Welcome to Jungle " << getVisitorName();
+    }
+};
+
+int main(){
+    string name;
+
+    cout << "Enter your name : ";
+    getline(cin, name);  
+
+    Jungle j;  
+    j.setVisitorName(name); 
+    j.welcomeMessage(); 
+
+    return 0;
+}
