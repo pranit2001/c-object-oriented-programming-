@@ -1,0 +1,35 @@
+including constructor 
+
+#include <iostream>
+using namespace std;
+
+class humans {
+public : 
+      string Nationality;
+      string State ;
+      string Village ;
+    void search(){
+        cout << "nationality - " << Nationality << endl;
+        cout << "state -  " << State << endl;
+        cout << "village  -" << Village << endl ;
+
+    }
+    humans(string nationality, string state, string village){
+
+        Nationality = nationality;
+        State = state ;
+        Village = village;
+    } 
+};
+
+int main (){
+   humans indian = {"indian" , "maharastra" ,"pune"};
+
+   
+   indian.search();
+
+   humans americans= {"american ", "new york " , " Brooklyn (Kings County) "};
+  
+   
+   americans.search();
+}
